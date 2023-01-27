@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using RestaurantRaterMVC.Data;
 
-namespace RestaurantRaterMVC.Data
-{
-    public class Restaurant
+public class Restaurant
     {
         [Key]
         public int Id {get; set;}
@@ -46,8 +45,7 @@ namespace RestaurantRaterMVC.Data
         {
             get
             {
-                return (AverageFoodScore + AverageCleanlinessScore + AverageAtmosphereScore /3);
+                return (AverageFoodScore + AverageCleanlinessScore + AverageAtmosphereScore / 3);
             }
         }
     }
-}
