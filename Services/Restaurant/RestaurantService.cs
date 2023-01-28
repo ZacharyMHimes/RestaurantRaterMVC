@@ -1,15 +1,10 @@
-using Microsoft.VisualBasic;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using RestaurantRaterMVC.Models.Restaurant;
 using RestaurantRaterMVC.Data;
 
 
 
-namespace RestaurantRaterMVC.Data.Services.Restaurant
+namespace RestaurantRaterMVC.Services
 {
     public class RestaurantService : IRestaurantService
     {
@@ -21,7 +16,7 @@ namespace RestaurantRaterMVC.Data.Services.Restaurant
 
         public async Task<bool> CreateRestaurant(RestaurantCreate model)
         {
-            var restaurant = new Restaurant()
+            Restaurant restaurant = new Restaurant
             {
                 Name = model.Name,
                 Location =  model.Location,
