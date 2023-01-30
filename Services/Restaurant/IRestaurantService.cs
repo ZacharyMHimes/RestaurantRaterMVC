@@ -11,7 +11,7 @@ public interface IRestaurantService
 {
     Task<bool> CreateRestaurant(RestaurantCreate model);
     Task<List<RestaurantListItem>> GetAllRestaurants();
-    // Task<RestaurantDetail> GetRestaurantById(int id);
-    // Task<bool> UpdateRestaurant(RestaurantEdit model);
+    Task<Restaurant> GetRestaurantById(int id);
+    Task<bool> UpdateRestaurant(Restaurant restaurant);
     // Task<bool> DeleteRestaurant(int id);
 }
