@@ -13,5 +13,5 @@ public interface IRestaurantService
     Task<List<RestaurantListItem>> GetAllRestaurants();
     Task<Restaurant> GetRestaurantById(int id);
     Task<bool> UpdateRestaurant(Restaurant restaurant);
-    // Task<bool> DeleteRestaurant(int id);
+    Task<bool> DeleteRestaurant(Restaurant restaurant);
 }
